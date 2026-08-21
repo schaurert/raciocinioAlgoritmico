@@ -12,7 +12,7 @@ print("\n" + "=" * 50)
 # Leia uma senha e informe True se a senha digitada
 # for "python123" e False caso contrário.
 # ==================================================
-senha = input("Digite sua senha: ")
+senha = input("Digite sua senha: ").lower() #transforma em minusculo
 print(senha == "python123")
 
 print("\n" + "=" * 50)
