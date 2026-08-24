@@ -44,14 +44,41 @@
 
 # 3. Peça um ano e verifique se ele é bissexto. Um ano é bissexto se:  for divisível por 4 e não for divisível por 100 ou for divisível por 400.
 
+# ano = int(input("Digite um ano (ex: 2026): "))
 
-# 4. Peça usuário e senha.
+# if ano % 4 ==0 and ano % 100 != 0 or ano % 400 == 0:
+#     print(f"O ano {ano} é bissexto")
+# else:
+#     print(f"O ano {ano} não é bissexto")
 
-# Só permita acesso se usuário for "admin" e a senha for "1234".
-# Caso contrário, bloqueie.
-# Se o usuário for "convidado" e não digitar senha, exiba “Acesso restrito”.
+# # 4. Peça usuário e senha.
+# # Só permita acesso se usuário for "admin" e a senha for "1234".
+# # Caso contrário, bloqueie.
+# # Se o usuário for "convidado" e não digitar senha, exiba “Acesso restrito”.
+
+# user = input("Digite o usuário: ").lower()
+# senha =  input("Digite a senha: ").lower()
+
+# if user == "admin" and senha == "1234":
+#     print("Acesso permitido!")
+# elif user == "convidado" and senha == "":
+#     print("Acesso restrito!")
+# else:
+#     print("Acesso bloqueado!")
+
 # 5. Peça duas coordenadas (x, y) e verifique a posição do ponto em relação a um quadrado cujos vértices vão de (0,0) até (10, 10).
-
 # Se o ponto estiver estritamente dentro da região, mostre “Dentro do quadrado”.
 # Se estiver exatamente em uma das bordas, mostre “Na fronteira”.
 # Caso contrário, mostre “Fora do quadrado”.
+
+x = float(input("Digite a coordenada x: "))
+y = float(input("Digite a coordenada y: "))
+
+if x >= 0 and x <= 10 and y >= 0 and y <= 10:
+    if x > 0 and x < 10 and y > 0 and y < 10:
+        print("Dentro do quadrado")
+    else:
+        print("Na fronteira")
+else:
+    print("Fora do quadrado")
+
