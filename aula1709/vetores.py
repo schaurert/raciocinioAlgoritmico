@@ -1,6 +1,6 @@
 numbers = [10, 7, 2, 15] #nome do vetor precisa ser plural
 
-#acessar índice (indicies começam em 0)
+#acessar índice (indicies começam em 0):
 #nome_varialvel[indice]
 #ex.: soma 10 e 7
 numbers[0]+numbers[2]
