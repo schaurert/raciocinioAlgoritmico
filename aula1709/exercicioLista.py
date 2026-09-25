@@ -35,21 +35,24 @@ import random
 # print(palavras)
 
 # 4. Escreva um programa que crie uma lista com os números de 1 a 10 e os imprima na tela em ordem reversa.
-print("\n" + "=" * 50)
-print("EXERCÍCIO 4")
-print("=" * 50)
-numeros = []
+# print("\n" + "=" * 50)
+# print("EXERCÍCIO 4")
+# print("=" * 50)
+# numeros = []
 
-for i in range(10):
-    numero = random.randint(1, 100)
-    numeros.append(numero)
+# for i in range(10):
+#     numero = random.randint(1, 100)
+#     numeros.append(numero)
 
-print(f"Os números gerados foram: {numeros}")
-numeros.reverse()
-print(f"A ordem reversa desses números é: {numeros}")
+# print(f"Os números gerados foram: {numeros}")
+# numeros.reverse()
+# print(f"A ordem reversa desses números é: {numeros}")
 
       
 # 5. Escreva um programa que crie uma lista de palavras e imprima a palavra mais longa e a palavra mais curta da lista.
+
+palavras = ["casa", "árvore", ""]
+
 
 
 # 6. Escreva um programa que crie duas listas, uma com os números pares de 1 a 10 e outra com os números ímpares de 1 a 10. Em seguida, junte as duas listas em uma terceira lista e a imprima na tela.
