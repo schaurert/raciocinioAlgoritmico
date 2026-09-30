@@ -4,22 +4,21 @@ print("\n" + "=" * 50)
 print("EXERCÍCIO 1")
 print("=" * 50)
 
-matriz = []
+matriz = [
+[0, 0, 0, 0, 0],
+[0, 0, 0, 0, 0],
+[0, 0, 0, 0, 0],
+[0, 0, 0, 0, 0],
+[0, 0, 0, 0, 0]
+]
 
-for i in range(5):
-    linha = []
-
-    for j in range(5):
+for i in range (5):
+    for j in range (5):
         if i == j:
-            linha.append(1)
-        else:
-            linha.append(0)
+            matriz[i][j] = 1
 
-    matriz.append(linha)
-
-for linha in matriz:
-    print(linha)
-
+for i in matriz:
+    print(i)
 
 # 2. Leia uma matriz 4 x 4, imprima a matriz e retorne a localização (linha e a coluna) do maior valor.
 
@@ -27,30 +26,33 @@ print("\n" + "=" * 50)
 print("EXERCÍCIO 2")
 print("=" * 50)
 
-matriz = []
+matriz = [
+[0, 0, 0, 0],
+[0, 0, 0, 0],
+[0, 0, 0, 0],
+[0, 0, 0, 0]
+]
 
 for i in range(4):
-    linha = []
-
     for j in range(4):
-        numero = int(input(f"Digite o valor [{i}][{j}]: "))
-        linha.append(numero)
-
-    matriz.append(linha)
+        matriz[i][j] = int(input(f"Digite o valor [{i}][{j}]: "))
 
 print("\nA matriz digitada foi:")
-
 for linha in matriz:
     print(linha)
 
-maior = max(max(linha) for linha in matriz)
+maior = matriz[0][0]
+linhMaior = 0
+colunaMaior = 0
 
 for i in range(4):
     for j in range(4):
-        if matriz[i][j] == maior:
-            print(f"O maior valor da matriz é {maior}")
-            print(f"Está na linha {i} e na coluna {j}")
+        if matriz[i][j] > maior:
+            maior = matriz[i][j]
+            linhMaior = i
+            colunaMaior = j
 
+print(f"O maior valor digitado foi {maior} e está na linha {linhMaior} e coluna {colunaMaior}")
 
 # 3. Faça um programa que leia uma matriz de 5 linhas e 4 colunas contendo as seguintes informações sobre alunos de uma disciplina, sendo todas as informações do tipo inteiro:
 # a. Primeira coluna: número de matrícula (use um inteiro)
@@ -66,31 +68,29 @@ print("\n" + "=" * 50)
 print("EXERCÍCIO 3")
 print("=" * 50)
 
-matriz = []
+matriz = [
+    [0, 0, 0, 0],
+    [0, 0, 0, 0],
+    [0, 0, 0, 0],
+    [0, 0, 0, 0],
+    [0, 0, 0, 0]
+]
 
-for i in range(5):
-    linha = []
+for i in range (5):
+    matriz[i][0] = int(input("Digite a matricula do aluno: "))
+    matriz[i][1] = int(input("Digite a média das provas: "))
+    matriz[i][2] = int(input("Digite a média dos trabalhos: "))
+    matriz[i][3] = matriz[i][1] + matriz[i][2]
 
-    matricula = int(input("Digite a matrícula: "))
-    linha.append(matricula)
+for i in range (5):
+    print(matriz[i])
 
-    mediaProva = int(input("Digite a média das provas: "))
-    linha.append(mediaProva)
-
-    mediaTrab = int(input("Digite a média dos trabalhos: "))
-    linha.append(mediaTrab)
-
-    notaFinal = mediaProva + mediaTrab
-    linha.append(notaFinal)
-
-    matriz.append(linha)
-
-maior = matriz[0][3]
+maiorNota = matriz[0][3]
 matriculaMaior = matriz[0][0]
 
-for i in range(5):
-    if matriz[i][3] > maior:
-        maior = matriz[i][3]
+for i in range (5):
+    if matriz[i][3] > maiorNota:
+        maiorNota = matriz[i][3]
         matriculaMaior = matriz[i][0]
 
-print(f"A matrícula do aluno com a maior nota é {matriculaMaior}")
+print(f"A matricula do aluno com a maior nota é {matriculaMaior}")
