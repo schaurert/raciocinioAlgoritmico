@@ -58,6 +58,3 @@ print()
 
 for numero in numeros:
     print(numero * 2)
-
-#Implemente um programa em Python para verificar quantos números uma aposta acertou na Mega Sena. O programa deve ler do teclado os 6 números apostados e comparar com os 6 números sorteados. Ao final, o programa deve exibir os números sorteados, númeroa jogados e quantidade de acertos.
-
